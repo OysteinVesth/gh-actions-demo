@@ -1,14 +1,21 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { appendExcelSheet } = require('./sheets')
 
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
+  const googleCredentials = core.getInput('google_credentials')
+
+  console.log('Will create new sheet row')
+  appendExcelSheet(googleCredentials)
+  console.log('Sheet row created')
+
   console.log(`Hello ${nameToGreet}!`);
+
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
-  github.context
+  // Get the JSON webhook pa yload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   const contextpayload = JSON.stringify(github.context, undefined, 2)
   console.log(`The context payload: ${contextpayload}`)

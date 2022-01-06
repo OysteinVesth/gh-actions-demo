@@ -5,6 +5,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  google_credentials:
+    description: 'Credentials used to update spreadsheet'
+    required: false
+
 outputs:
   time: # id of output
     description: 'The time we greeted you'
