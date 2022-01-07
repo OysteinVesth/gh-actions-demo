@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: oysteinvesth/gh-actions-demo@v1.9
+        uses: oysteinvesth/gh-actions-demo
         with:
           who-to-greet: 'Mona the Octocat'
           google_credentials: ${{ env.GOOGLE_SA_JSON_KEY }}

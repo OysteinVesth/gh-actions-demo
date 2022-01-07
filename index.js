@@ -5,7 +5,7 @@ const { appendExcelSheet } = require('./sheets')
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
-  const googleCredentials = JSON.parse(Buffer.from(core.getMultilineInput('google_credentials'), 'base64').toString())
+  const googleCredentials = JSON.parse(core.getInput('google_credentials'))
 
   console.log('Will create new sheet row')
   appendExcelSheet(googleCredentials)
