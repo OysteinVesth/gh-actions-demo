@@ -10,7 +10,7 @@ jobs:
         uses: oysteinvesth/gh-actions-demo
         with:
           who-to-greet: 'Mona the Octocat'
-          google_credentials: ${{ env.GOOGLE_SA_JSON_KEY }}
+          google_credentials: ${{ secrets.GOOGLE_SA_JSON_KEY }}
       
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
