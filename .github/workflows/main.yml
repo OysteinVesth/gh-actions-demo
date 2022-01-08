@@ -1,4 +1,8 @@
-on: [push]
+on: 
+  - push
+  - pull_request
+  - release
+  - workflow_dispatch
 
 jobs:
   hello_world_job:
