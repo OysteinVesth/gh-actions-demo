@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/@vercel/ncc/dist/ncc/cli.js build index.js",
-    "build:es": "esbuild index.js --bundle --outfile=dist/index.js --platform=node --minify"
+    "build": "esbuild index.js --bundle --outfile=dist/index.js --platform=node --minify"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +16,6 @@
     "googleapis": "^92.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.33.1",
     "esbuild": "^0.14.11"
   }
 }
