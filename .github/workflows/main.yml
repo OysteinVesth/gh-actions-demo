@@ -1,4 +1,8 @@
-on: [push, pull_request, release, workflow_dispatch]
+on:
+  push:
+    # Pattern matched against refs/tags
+    tags:        
+      - '*'           # Push events to every tag not containing /
 
 jobs:
   beta:
