@@ -14,3 +14,10 @@ jobs:
       
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+        
+  prod:
+    runs-on: ubuntu-latest
+    name: Production
+    steps:
+      - name: Production
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
