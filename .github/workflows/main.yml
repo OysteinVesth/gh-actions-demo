@@ -4,7 +4,7 @@ jobs:
   beta:
     environment: beta
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Beta
     steps:
       - name: Hello world action step
         id: hello
@@ -24,3 +24,10 @@ jobs:
     steps:
       - name: Production
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+        
+      - name: Hello world action step
+        id: hello
+        uses: oysteinvesth/gh-actions-demo@v1.18
+        with:
+          who-to-greet: 'Mona the Octocat'
+          google_credentials: ${{ secrets.GOOGLE_SA_JSON_KEY }}
