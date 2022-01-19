@@ -4,4 +4,4 @@ Test PR
 
 Ny tekst
 
-Nå gjør jeg noe greie
+tar bort greier
